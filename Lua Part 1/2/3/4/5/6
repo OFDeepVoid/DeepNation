@@ -1,0 +1,171 @@
+# In the following tutorial, you’ll be learning on the basics and best methods to use and experiment with Roblox Studio. This tutorial is not made for professionals, this is for pure beginners or just inte-rmediates who want to boost their skills up a bit, the following material will be fairly simple to solve on your own.
+
+This tutorial will work with steps, I believe each section is timed appropriately. If you have any disagreements or things you wish to add on the tutorial please place it down below.
+
+Unlike building and UI design, scripting is fairly practical and has not much " tastes " to it. The goal of scripting is simple, your attempting to make the game itself work, not much else if you put it into a broad spectrum. Note, the following tutorial is for Roblox Lua, your experiences with other programs such as JavaScript, Python, C+, PHP, and all others will be significantly different.
+
+Proper Format
+
+Before starting, please make sure your format is correct to ensure the perfect programming experience. Being disorganized is one of your worst enemies when scripting, it is best to follow a specific format, but feel free to change it however you wish.
+
+To select the proper format, click on View in the upper side of your screen, then make sure you have selected or have the following, " Properties, Explorer, Command Bar, and Output. "
+
+Finally, your screen should look something similar to this,
+
+image
+image
+1920×1040 640 KB
+
+Creating a Script
+Scripts can be inserted almost everywhere, for the sake of keeping this tutorial short, head over to * Model* on the top panel and browse to the far left and click on Script which appears as a blue scroll, you should see a white screen once finished.
+
+100
+100
+1830×1002 686 KB
+Print
+
+Now that you have a proper format, you will learn one of the most basic commands in Lua. Printing is perhaps the first thing that all programmers learn, print is a command that allows you to print out a statement.
+
+HelloWorld
+
+Erase the following text, once finished type out print in all lowercase letters, if spelled incorrectly or typed with any capitals, the script ceases to function. Then, type out (“YellowNoobs!”) after the message, make sure there is no spaces between print and ( if you want your script to work.
+
+print(“YellowNoobs!”)
+
+You may replace YellowNoobs with any other text you wish as long as it is in-between (""), the end result should look something like this,
+
+YellowNoobs!
+
+Congrats! You’ve ( probably ) made your first line of script! If you’d like to see if the script works, scroll down to Output and paste your command onto the Command Bar, you should see the printed text inside Output.
+
+PrintingOutput
+Variables
+
+Now that you’ve learned how to make a script, you’ll learn what variables are and how to make on of your own. Variables aren’t necessary, but without them you’ll experience a true pain and hell, it is HIGHLY recommended you use variables in order to save you lots of wasted time, they store booleans, numbers, and strings.
+
+I will start by picking up where we last left off, instead of putting down quotes, letters, and punctuation, you could just put down your own custom text for that command.
+
+MyVariable = “YellowNoobs!”
+
+Feel free to change MyVariable to any variable name of your liking, you’ve now managed to make a variable and now can replace the command with it instead, here’s what it looks like in the Output,
+
+OUTPUTVARIABLE
+OUTPUTVARIABLE
+773×170 2.57 KB
+Local
+
+Putting local next to a Variable will transform it into a local variable, it can only be used in a limited scope instead of all Scripts, meaning it can be used ONLY in the following script you are writing/programming inside.
+
+Below you may find the differences of a Local Variable and a Global Variable,
+
+MyGlobalVariable= 10
+
+local MyLocalVariable = 10
+
+Sections and Textlines
+
+Sections are a simple green text that organizes and names your lines of code, while also not necessary, it is highly recommended to save you hours of searching.
+
+Creating sections is extremely easy, simply add - - without spaces and then your text after you are finished, it should appear something like this,
+
+Sections
+
+Getting Inside Settings
+
+You might’ve noticed that when you do a script such as transparency = 1, nothing will happen, this is because the Roblox Engine has no idea what to make transparent, you need to give it more data for it to actually make the base-plate transparent,
+
+game.WorkSpace.Baseplate.Transparency = 1
+
+Now, your script will work because the Engine has enough information to execute a command, making the base-plate transparent.
+
+Functions
+
+Functions listen to events and perform a specific task, while learning about functions you’ll also hear about Arguments and Events which you’ll become experienced with later.
+
+Below is an example of a regular Function,
+
+function myFunction()
+game.Workspace.Baseplate.BrickColor = BrickColor.new(“Pine cone”)
+end
+
+myFunction()
+
+This function will turn the base-plate into a pine-cone woody color.
+
+Local-Scripts
+
+Local Scripts can execute commands only with the LocalPlayer inside of it, a regular Script would never work in a Local Script. Basically, it runs the player’s client instead of running the server like a normal script would do.
+
+Here is an example of a LocalScript,
+
+tool = script.Parent
+player = game.Players.LocalPlayer
+
+tool.Activated:connect(function()
+player.Character.Torso.Transparency = 1
+end)
+
+This will complete make the torso invisible, also, notice how I used LocalPlayer?
+
+Booleans
+
+You might’ve heard this word in math class and it is related. Booleans in scripting are either true or false, when comparing values you’ll get a Boolean.
+
+1 > 4
+2 == 5
+8 < 2
+
+Repeat and Loops
+
+There are two types of loops, both are useful for your games, they are called " For Loops " and " While Loops " and both fall into the repeat category.
+
+Below, is an example of a For Loop,
+
+if i = 43 do
+if i < 30 then
+print (i)
+end
+wait(1)
+end
+
+Below is an example of a While Script,
+
+while 2+2==4 do
+local part = Instance.new(“Part”, game.Workspace)
+wait(1)
+end
+
+print(“WhileScripts!”)
+
+Statements
+
+This is perhaps one of the most important topics in programming/scripting, it makes it so that specific commands only happen if the criteria is met, a statement matches the script below,
+
+if true then
+print(“Congratulations”)
+end
+
+For example, if 5 > 1 then the Output will print “Congratulations” since 5 > 1 is true. If the script said 5 < 1 then the script will not print “Congratulations” in Output, you’re also using Booleans!
+
+if 5 > 1 then
+print(“Congratulations”)
+end
+
+Tables
+
+While not the most beginner topic, tables 10 are frequently needed for games. Tables come in all forms, typically being an Array or Dictionary and even a Mixed-Table which are all helpful for services in your script/game.
+
+Tables are basically lists, here is an example of a table,
+
+CoolTable = {1,2,3,4,5}
+
+table.sort(CoolTable)
+print(table.concat(CoolTable)
+
+What is the Difference Between Input and Output?
+
+Input is the command given to the engine, while Output is the received/finished command, for example, print(“YellowNoobs!”) is a Input while the result in the Output below is the output of the command.
+
+How do I Stop Exploiters?
+
+Stopping exploiters isn’t a beginner issue, it is a little more advanced than interpreted. Throughout your scripting career, you’ll realize that the main reason for exploits is due to poor and weak scripts. In order to stop exploiters, I recommend using FilteringEnabled, AlvinBlox describes this greatly in his video.
